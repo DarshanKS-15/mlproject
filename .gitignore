@@ -1,5 +1,6 @@
-# self
-pip install -r requirements.txt
+# self 
+# for installing packeges
+pip install -r requirements.txt   
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
