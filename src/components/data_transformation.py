@@ -23,7 +23,7 @@ class DataTransformation:
     def __init__(self):
         self.data_transformation_config=DataTransformationConfig()
 
-    def get_transformer_object(self):
+    def get_data_transformer_object(self):
         '''This function is responsible for data transformation'''
         try:
             numerical_columns=['writing_score','reading_score']
@@ -47,8 +47,8 @@ class DataTransformation:
                     ('scaler',StandardScaler(with_mean=False))
                 ]
             )
-            logging.info('Numerical columns standard scaling completed')
-            logging.info("Categorical columns encoding completed")
+            logging.info(f"Categorical columns: {categorical_columns}")
+            logging.info(f"Numerical columns: {numerical_columns}")
 
             preprocessor=ColumnTransformer(
                 [
